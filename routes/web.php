@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Home Page
+
 Route::get('/', function () {
 
     $var = [
@@ -25,6 +27,8 @@ Route::get('/', function () {
 
     return view('welcome', $var, $title_page);
 });
+
+//Services Page
 
 Route::get('/services', function () {
 
@@ -45,4 +49,73 @@ Route::get('/services', function () {
     $name = request('name');
 
     return view('services',$var ,$title_page)->with(['services' => $services], ['name' => $name]);
+});
+
+// Web Design Page
+
+Route::get('/services/web design', function () {
+
+    $var = [
+        'copywrite' => '©'
+    ];
+
+    $title_page = [
+        'title' => 'Web Design'
+    ];
+
+    $services = [
+        ['type' => 'web design', 'price' => '150$'],
+        ['type' => 'web development', 'price' => '300$'],
+        ['type' => 'consulting', 'price' => '50$/hour']
+    ];
+
+    $name = request('name');
+
+    return view('web-design',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
+});
+
+// Web Development Page
+
+Route::get('/services/web development', function () {
+
+    $var = [
+        'copywrite' => '©'
+    ];
+
+    $title_page = [
+        'title' => 'Web Development'
+    ];
+
+    $services = [
+        ['type' => 'web design', 'price' => '150$'],
+        ['type' => 'web development', 'price' => '300$'],
+        ['type' => 'consulting', 'price' => '50$/hour']
+    ];
+
+    $name = request('name');
+
+    return view('web-development',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
+});
+
+// Consulting Page
+
+Route::get('/services/consulting', function () {
+
+    $var = [
+        'copywrite' => '©'
+    ];
+
+    $title_page = [
+        'title' => 'Consulting'
+    ];
+
+    $services = [
+        ['type' => 'web design', 'price' => '150$'],
+        ['type' => 'web development', 'price' => '300$'],
+        ['type' => 'consulting', 'price' => '50$/hour']
+    ];
+
+    $name = request('name');
+
+    return view('consulting',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
 });

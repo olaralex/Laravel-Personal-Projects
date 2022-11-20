@@ -22,8 +22,6 @@
                     <h1>Fornt-End Developer{{ $copywrite }}</h1>
                 </div>
 
-                <p>{{ $name }}</p>
-
                 <ul>
                     <li>
                         <h3><a href="/">Home Page</a></h3>
@@ -34,17 +32,19 @@
             <div class="container">
 
                 <h2>Services:</h2>
-
                     @foreach ($services as $service)
                             <div class="p-5">
-                                <p>{{$loop -> index+1}}. {{ $service['type'] }} - {{ $service['price'] }}
-                                    @if($loop -> first)
-                                         - the favorite
-                                    @endif
-                                    @if($loop -> last)
-                                        - most effective
-                                    @endif
-                                </p>
+                                <a href="/services/{{ $service['type'] }}">
+                                    <p>
+                                        {{$loop -> index+1}}. {{ $service['type'] }} - {{ $service['price'] }}
+                                        @if($loop -> first)
+                                             - the favorite
+                                        @endif
+                                        @if($loop -> last)
+                                            - most effective
+                                        @endif
+                                    </p>
+                                </a>
                             </div>
                     @endforeach
             </div>
