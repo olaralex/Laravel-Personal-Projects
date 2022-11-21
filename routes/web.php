@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ServiceController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,92 +32,16 @@ Route::get('/', function () {
 
 //Services Page
 
-Route::get('/services', function () {
-
-    $var = [
-        'copywrite' => '©'
-    ];
-
-    $title_page = [
-        'title' => 'Services'
-    ];
-
-    $services = [
-        ['type' => 'web design', 'price' => '150$'],
-        ['type' => 'web development', 'price' => '300$'],
-        ['type' => 'consulting', 'price' => '50$/hour']
-    ];
-
-    $name = request('name');
-
-    return view('services',$var ,$title_page)->with(['services' => $services], ['name' => $name]);
-});
+Route::get('/services', [ServiceController::class, 'service']);
 
 // Web Design Page
 
-Route::get('/services/web design', function () {
-
-    $var = [
-        'copywrite' => '©'
-    ];
-
-    $title_page = [
-        'title' => 'Web Design'
-    ];
-
-    $services = [
-        ['type' => 'web design', 'price' => '150$'],
-        ['type' => 'web development', 'price' => '300$'],
-        ['type' => 'consulting', 'price' => '50$/hour']
-    ];
-
-    $name = request('name');
-
-    return view('web-design',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
-});
+Route::get('/services/web design', [ServiceController::class, 'design']);
 
 // Web Development Page
 
-Route::get('/services/web development', function () {
-
-    $var = [
-        'copywrite' => '©'
-    ];
-
-    $title_page = [
-        'title' => 'Web Development'
-    ];
-
-    $services = [
-        ['type' => 'web design', 'price' => '150$'],
-        ['type' => 'web development', 'price' => '300$'],
-        ['type' => 'consulting', 'price' => '50$/hour']
-    ];
-
-    $name = request('name');
-
-    return view('web-development',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
-});
+Route::get('/services/web development', [ServiceController::class, 'dev']);
 
 // Consulting Page
 
-Route::get('/services/consulting', function () {
-
-    $var = [
-        'copywrite' => '©'
-    ];
-
-    $title_page = [
-        'title' => 'Consulting'
-    ];
-
-    $services = [
-        ['type' => 'web design', 'price' => '150$'],
-        ['type' => 'web development', 'price' => '300$'],
-        ['type' => 'consulting', 'price' => '50$/hour']
-    ];
-
-    $name = request('name');
-
-    return view('consulting',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
-});
+Route::get('/services/consulting', [ServiceController::class, 'cons']);
