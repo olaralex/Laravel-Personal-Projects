@@ -33,17 +33,9 @@
 
                 <h2>Services:</h2>
                     @foreach ($services as $service)
-                            <div class="p-5">
-                                <a href="/services/{{ $service['type'] }}">
-                                    <p>
-                                        {{$loop -> index+1}}. {{ $service['type'] }} - {{ $service['price'] }}
-                                        @if($loop -> first)
-                                             - the favorite
-                                        @endif
-                                        @if($loop -> last)
-                                            - most effective
-                                        @endif
-                                    </p>
+                            <div>
+                                <a href="services/{{ $service->type }}">
+                                    {{ $service->name }} - {{ $service->type }} - {{ $service->price }}
                                 </a>
                             </div>
                     @endforeach

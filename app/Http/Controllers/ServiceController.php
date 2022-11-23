@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Service;
 
 class ServiceController extends Controller
 {
@@ -16,11 +17,7 @@ class ServiceController extends Controller
             'title' => 'Services'
         ];
 
-        $services = [
-            ['type' => 'web design', 'price' => '150$'],
-            ['type' => 'web development', 'price' => '300$'],
-            ['type' => 'consulting', 'price' => '50$/hour']
-        ];
+        $services = Service::all();
 
         $name = request('name');
 
@@ -37,11 +34,7 @@ class ServiceController extends Controller
             'title' => 'Web Design'
         ];
 
-        $services = [
-            ['type' => 'web design', 'price' => '150$'],
-            ['type' => 'web development', 'price' => '300$'],
-            ['type' => 'consulting', 'price' => '50$/hour']
-        ];
+        $services = Service::all();
 
         $name = request('name');
 
@@ -58,11 +51,7 @@ class ServiceController extends Controller
             'title' => 'Web Development'
         ];
 
-        $services = [
-            ['type' => 'web design', 'price' => '150$'],
-            ['type' => 'web development', 'price' => '300$'],
-            ['type' => 'consulting', 'price' => '50$/hour']
-        ];
+        $services = Service::all();
 
         $name = request('name');
 
