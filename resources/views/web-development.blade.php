@@ -29,10 +29,14 @@
             </ul>
         </header>
 
-        <div class="container">
-            <h1>{{ $title }}</h1>
+        <div class="container p-5">
+            <h1>
+                {{ $title }}
+            </h1>
 
-            <p>Lorem ipsum</p>
+            <p>
+
+            </p>
         </div>
 
 @endsection

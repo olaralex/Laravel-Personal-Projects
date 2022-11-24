@@ -1,34 +1,43 @@
+/*
+    Header
+*/
+
 header{
     justify-content: space-around;
     background-color: #eee;
     padding: 10px;
 }
-body {
-    font-family: 'Nunito', sans-serif;
+h1,h3{
+    margin: 0px;
+    padding: 20px 0px;;
 }
 ul{
     list-style: none;
     padding: 10px;
     margin: 0px;
 }
+.firma{
+    padding: 0px;
+}
+.logo{
+    height: 80px;
+    padding-right: 15px;
+}
+
+/*
+    Body
+*/
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*
+    Footer
+*/
+
 footer{
     background-color: #eee;
     padding: 20px;
     text-align: center;
-}
-.firma{
-    padding: 0px;
-}
-h1{
-    margin: 0px;
-    padding: 20px 0px;;
-}
-h3{
-    margin: 0px;
-    padding: 20px;
-}
-
-.logo{
-    height: 80px;
-    padding-right: 15px;
 }

@@ -19,16 +19,21 @@
             <header class="flex">
                 <div class="flex text-center">
                     <img class="logo" src="/images/front-end.jpg" alt="fornt-end-logo">
-                    <h1>Fornt-End Developer{{ $copywrite }}</h1>
+                    <h1>
+                        Fornt-End Developer{{ $copywrite }}
+                    </h1>
                 </div>
 
                 <ul>
                     <li>
-                        <h3><a href="/">Home Page</a></h3>
+                        <h3>
+                            <a class="" href="/">Home Page</a>
+                        </h3>
                     </li>
                 </ul>
             </header>
 
+            <!--
             <div class="container">
 
                 <h2>Services:</h2>
@@ -39,6 +44,29 @@
                                 </a>
                             </div>
                     @endforeach
+            </div>
+            -->
+
+            <div class="container p-5">
+                <div class="title pb-5">
+                    <h2>
+                        What We Offer
+                    </h2>
+                </div>
+                <div class="row p-3 border">
+                    @foreach ($services as $service)
+                        <div class="col-sm-12 col-md-4 p-1 bg-light border">
+                            <h4 class="p-1">
+                                {{strtoupper( $service->type )}}
+                            </h4>
+                            <br>
+                            <p>
+                                We are offering one of the best <strong>{{ $service->type }}</strong> you can have, click on the button down bellow and see more...
+                            </p>
+                            <a class="btn btn-outline-dark p-1" href="services/{{ $service->type }}" role="button">{{strtoupper( $service->type )}}</a>
+                        </div>
+                    @endforeach
+                </div>
             </div>
 
 @endsection

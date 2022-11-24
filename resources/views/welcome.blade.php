@@ -24,11 +24,18 @@
 
         <ul>
             <li>
-                <h3><a href="services">Services</a></h3>
+                <h3>
+                    <a href="services">Services</a>
+                </h3>
             </li>
         </ul>
     </header>
 
-    <h2>Welcome</h2>
+    <div class="container p-5">
+        <h2>
+            Welcome To Our Page
+        </h2>
+
+    </div>
 
 @endsection
