@@ -34,6 +34,10 @@ Route::get('/', function () {
 
 Route::get('/services', [ServiceController::class, 'service']);
 
+// Add To Cart
+
+Route::post('/services', [ServiceController::class, 'store']);
+
 // Web Design Page
 
 Route::get('/services/web design', [ServiceController::class, 'design']);
@@ -45,3 +49,4 @@ Route::get('/services/web development', [ServiceController::class, 'dev']);
 // Consulting Page
 
 Route::get('/services/consulting', [ServiceController::class, 'cons']);
+

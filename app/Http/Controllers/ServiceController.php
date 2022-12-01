@@ -7,6 +7,9 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
+
+    // Service Funcion
+
     public function service()
     {
         $var = [
@@ -23,6 +26,8 @@ class ServiceController extends Controller
 
         return view('services',$var ,$title_page)->with(['services' => $services], ['name' => $name]);
     }
+
+    // Design Function
 
     public function design()
     {
@@ -41,6 +46,8 @@ class ServiceController extends Controller
         return view('web-design',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
     }
 
+    // Development Function
+
     public function dev()
     {
         $var = [
@@ -58,6 +65,8 @@ class ServiceController extends Controller
         return view('web-development',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
     }
 
+    // Consulting Function
+
     public function cons()
     {
         $var = [
@@ -68,14 +77,18 @@ class ServiceController extends Controller
             'title' => 'Consulting'
         ];
 
-        $services = [
-            ['type' => 'web design', 'price' => '150$'],
-            ['type' => 'web development', 'price' => '300$'],
-            ['type' => 'consulting', 'price' => '50$/hour']
-        ];
+        $services = Service::all();
 
         $name = request('name');
 
         return view('consulting',$var ,$title_page)->with(['services' => $services] ,['name' => $name]);
+    }
+
+    // Store Function
+
+    public function store()
+    {
+        error_log(request('value'));
+        return redirect('/');
     }
 }

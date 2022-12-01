@@ -37,6 +37,15 @@
             <p>
                 Lorem ipsum
             </p>
+
+            <div class="add-to-cart">
+                <form action="/services" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-dark" name="type" id="type" value="consulting">
+                        Add To Cart
+                    </button>
+                </form>
+            </div>
         </div>
 
 @endsection

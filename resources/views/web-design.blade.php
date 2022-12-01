@@ -37,6 +37,11 @@
             <p>
                 Lorem ipsum
             </p>
+            <div class="add-cart">
+                <button type="button" class="btn btn-outline-dark">
+                    Add To Cart
+                </button>
+            </div>
         </div>
 
 @endsection
