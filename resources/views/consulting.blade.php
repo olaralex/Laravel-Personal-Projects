@@ -18,13 +18,23 @@
 
         <header class="flex">
             <div class="flex text-center">
-                <img class="logo" src="/images/front-end.jpg" alt="fornt-end-logo">
+                <a href="/">
+                    <img class="logo" src="/images/front-end.jpg" alt="fornt-end-logo">
+                </a>
                 <h1>Fornt-End Developer{{ $copywrite }}</h1>
             </div>
 
             <ul>
                 <li>
                     <h3><a href="/services">Services</a></h3>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/services">Services</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </header>
